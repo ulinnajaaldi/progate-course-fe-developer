@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #404146;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #444445;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.nav-brand {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-items a:hover {
+  color: white;
+}
+
+.hero-section {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 12px;
+}
+
+.hero-section span {
+  color: #f1d00e;
+}
+
+.hero-section h2 a {
+  font-size: 44px;
+  font-weight: 200;
+  color: #404146;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section h2 a:hover {
+  color: #0e70f1;
+}
+
+.hero-image {
+  width: 200px;
+}
+
+.about-section {
+  background-color: #f4f4f4;
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.about-section h1 {
+  margin-bottom: 28px;
+}
+
+.project-section {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.project-section h1 {
+  margin-bottom: 28px;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-item img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  padding: 100px 80px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.contact-section h1 {
+  margin-bottom: 28px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#email,
+#message {
+  max-width: 600px;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 16px;
+  outline: none;
+}
+
+#submit {
+  max-width: 320px;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  background-color: #f5e06a;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #f1d00e;
+}
+
+footer {
+  background-color: #54555e;
+}
+
+footer div {
+  padding: 40px 80px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  color: white;
+}
+
+.footer-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-items a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+  padding: 12px 8px;
+}
+
+.footer-items a:hover {
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger-item {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+}
