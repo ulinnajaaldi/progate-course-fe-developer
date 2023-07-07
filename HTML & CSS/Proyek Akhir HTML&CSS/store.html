@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aroma Bumi - Store</title>
+    <meta
+      name="description"
+      content="Aroma bumi adalah sebuah usaha yang bergerak di bidang kuliner khususnya minuman."
+    />
+    <meta
+      name="keywords"
+      content="aroma bumi, aroma bumi coffee, aroma bumi tea, aroma bumi coffee & tea, aroma bumi coffee and tea, aroma bumi coffee and tea bandung, aroma bumi coffee and tea jakarta, aroma bumi coffee and tea surabaya, aroma bumi coffee and tea semarang, aroma bumi coffee and tea yogyakarta, aroma bumi coffee and tea malang, aroma bumi coffee and tea solo, aroma bumi coffee and tea denpasar, aroma bumi coffee and tea bali, aroma bumi coffee and tea medan, aroma bumi coffee and tea makassar, aroma bumi coffee and tea palembang, aroma bumi coffee and tea lampung, aroma bumi coffee and tea kalimantan, aroma bumi coffee and tea sumatera, aroma bumi coffee and tea sulawesi, aroma bumi coffee and tea jawa, aroma bumi coffee and tea indonesia, aroma bumi coffee and tea manado, aroma bumi coffee and tea papua, aroma bumi coffee and tea aceh, aroma bumi coffee and tea lombok, aroma bumi coffee and tea banyuwangi, aroma bumi coffee and tea jember, aroma bumi coffee and tea maluku, aroma bumi coffee and tea nusa tenggara"
+    />
+    <meta name="Ulinnaja Aldi" content="Aroma Bumi" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/store.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="/index.html" class="nav-brand">
+          <img src="/public/images/Logo White.png" alt="aroma coffe logo" />
+        </a>
+        <ul class="nav-menu">
+          <li><a href="/product.html" class="nav-list">Product</a></li>
+          <li><a href="/store.html" class="nav-list">Store</a></li>
+          <li><a href="/contact.html" class="nav-list">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div id="map"></div>
+      <div class="store-content">
+        <h1 class="store-title">Find Us!</h1>
+        <p class="store-subtitle">
+          Come visit us at our store or deliver to your house!
+        </p>
+        <div class="store-card">
+          <h3>Block 71</h3>
+          <p>
+            Ariobimo Sentral, South Jakarta, RT.9/RW.4, East Kuningan,
+            Setiabudi, Jakarta, 12950
+          </p>
+        </div>
+        <div class="store-card">
+          <h3>Woodland Park Residence</h3>
+          <p>
+            Jl. Raya Kalibata No.22, RW.7, Rawajati, Kec. Pancoran, Kota Jakarta
+            Selatan, Daerah Khusus Ibukota Jakarta 12750
+          </p>
+        </div>
+        <div class="store-card">
+          <h3>IKEA Alam Sutera</h3>
+          <p>
+            Alam Sutera, Jl. Jalur Sutera Boulevard No. 45, Kunciran, Kec.
+            Pinang, Kota Tangerang, Banten 15320
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <div class="footer-brand">
+          <img
+            src="./public/images/Logo White.png"
+            alt="aroma coffe logo"
+            class="footer-logo"
+          />
+          <div class="footer-icon-wrapper">
+            <img src="./public/images/MAIL ICON.svg" alt="mail" class="icon" />
+            <img src="./public/images/PHONE ICON.svg" alt="mail" class="icon" />
+          </div>
+        </div>
+        <div class="footer-menu">
+          <div class="footer-items">
+            <h1 class="footer-title">Product</h1>
+            <a href="/product-detail.html" class="footer-list">Coffee Based</a>
+            <a href="/product-detail.html" class="footer-list">Non-Coffee</a>
+            <a href="/product-detail.html" class="footer-list">Tea Based</a>
+          </div>
+          <div class="footer-items">
+            <h1 class="footer-title">Store</h1>
+            <a href="/store.html" class="footer-list">Location</a>
+          </div>
+          <div class="footer-items">
+            <h1 class="footer-title">Contact</h1>
+            <a href="/contact.html" class="footer-list">Customer Service</a>
+          </div>
+        </div>
+        <p class="footer-credit">2022 © Designed by Progate Indonesia</p>
+      </div>
+    </footer>
+    <script src="./js/map.js"></script>
+  </body>
+</html>
