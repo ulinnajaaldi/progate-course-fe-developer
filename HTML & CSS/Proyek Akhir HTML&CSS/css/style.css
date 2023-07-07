@@ -102,6 +102,15 @@ section {
   align-items: center;
   gap: 20px;
 }
+.animation {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease-in-out;
+}
+.animation-enter {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .card-image {
   width: 155px;
   height: 155px;
