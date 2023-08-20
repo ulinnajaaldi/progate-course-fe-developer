@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <h1>Get a FizzBuzz Result!</h1>
+    <form onsubmit="formSubmit(event)">
+      <label>Type a number: </label>
+      <input type="text" id="fizzbuzz" />
+      <button type="submit">Click Here!</button>
+    </form>
+    <hr />
+    <div id="result"></div>
+    <script>
+      const fizzbuzz = document.getElementById("fizzbuzz");
+      const result = document.getElementById("result");
+
+      function formSubmit(e) {
+        e.preventDefault();
+        const fizzbuzzValue = fizzbuzz.value;
+
+        if (isNaN(fizzbuzzValue)) {
+          result.appendChild(document.createElement("p")).innerHTML =
+            "Invalid Input!";
+          return;
+        }
+        if (fizzbuzzValue === "") {
+          result.appendChild(document.createElement("p")).innerHTML =
+            "Please input a number!";
+          return;
+        }
+
+        if (fizzbuzzValue % 3 === 0 && fizzbuzzValue % 5 === 0) {
+          result.appendChild(document.createElement("p")).innerHTML =
+            "FizzBuzz!";
+        } else if (fizzbuzzValue % 3 === 0) {
+          result.appendChild(document.createElement("p")).innerHTML = "Fizz!";
+        } else if (fizzbuzzValue % 5 === 0) {
+          result.appendChild(document.createElement("p")).innerHTML = "Buzz!";
+        } else {
+          result.appendChild(document.createElement("p")).innerHTML =
+            fizzbuzzValue;
+        }
+      }
+    </script>
+  </body>
+</html>
