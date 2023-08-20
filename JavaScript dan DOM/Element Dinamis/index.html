@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ninja Ken</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <h1 class="nav-brand">NINJA KEN</h1>
+        <div class="hamburger">
+          <div class="hamburger-item"></div>
+          <div class="hamburger-item"></div>
+          <div class="hamburger-item"></div>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#project">Project Contoh</a></li>
+          <li><a href="#contact">Hubungi Saya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section container">
+        <h1>NINJA KEN<span>.</span></h1>
+        <h2>
+          <a
+            href="https://github.com/ulinnajaaldi"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MY PORTFOLIO</a
+          >
+        </h2>
+        <img
+          src="/public/images/Ninja Ken.png"
+          alt="Ninja Ken"
+          class="hero-image"
+        />
+      </section>
+      <section class="about-section" id="about">
+        <div class="container">
+          <h1>Tentang Saya</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            magnam quisquam voluptates fugiat eum soluta molestiae nulla quas
+            harum laboriosam delectus est totam tempore in dolores nam,
+            asperiores debitis corporis. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </section>
+      <section class="project-section" id="project">
+        <h1>Proyek Contoh</h1>
+        <div class="project-wrapper">
+          <div class="slide-item fade">
+            <div class="project-item">
+              <img
+                src="/public/images/1.png"
+                alt="Image 1"
+                onclick="openModal('Image 1','/public/images/1.png', 'Image 1 caption text')"
+              />
+              <p>Image 1</p>
+            </div>
+            <div class="project-item">
+              <img
+                src="/public/images/2.png"
+                alt="Image 2"
+                onclick="openModal('Image 2','/public/images/2.png', 'Image 2 caption text')"
+              />
+              <p>Image 2</p>
+            </div>
+            <div class="project-item">
+              <img
+                src="/public/images/3.png"
+                alt="Image 3"
+                onclick="openModal('Image 3','/public/images/3.png', 'Image 3 caption text')"
+              />
+              <p>Image 3</p>
+            </div>
+          </div>
+          <div class="slide-item fade">
+            <div class="project-item">
+              <img
+                src="/public/images/1.png"
+                alt="Image 4"
+                onclick="openModal('Image 4','/public/images/1.png', 'Image 4 caption text')"
+              />
+              <p>Image 4</p>
+            </div>
+            <div class="project-item">
+              <img
+                src="/public/images/2.png"
+                alt="Image 5"
+                onclick="openModal('Image 5','/public/images/2.png', 'Image 5 caption text')"
+              />
+              <p>Image 5</p>
+            </div>
+            <div class="project-item">
+              <img
+                src="/public/images/3.png"
+                alt="Image 6"
+                onclick="openModal('Image 6','/public/images/3.png', 'Image 6 caption text')"
+              />
+              <p>Image 6</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-button">
+          <button class="prev" onclick="updateSlide(-1)">&#10094;</button>
+          <button class="next" onclick="updateSlide(1)">&#10095;</button>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-title"></p>
+            <img id="modal-image" src="" alt="Project Image" />
+            <p id="modal-caption"></p>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section" id="contact">
+        <h1>Hubungi Saya</h1>
+        <form class="container" id="form">
+          <input type="email" id="email" placeholder="Email (Diperlukan)" />
+          <textarea id="message" placeholder="Message (Diperlukan)"></textarea>
+          <input type="submit" value="Kirim" id="submit" />
+        </form>
+      </section>
+      <section class="accordion-section">
+        <div class="accordion-wrapper">
+          <button class="accordion">Accordion 1</button>
+          <div class="panel">
+            <p>Ninja Ken</p>
+            <p>Guru Domba</p>
+            <p>Bayi Ben</p>
+          </div>
+
+          <button class="accordion">Accordion 2</button>
+          <div class="panel">
+            <p>Ninja Ken</p>
+            <p>Guru Domba</p>
+            <p>Bayi Ben</p>
+          </div>
+
+          <button class="accordion">Accordion 3</button>
+          <div class="panel">
+            <p>Ninja Ken</p>
+            <p>Guru Domba</p>
+            <p>Bayi Ben</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <h1 class="footer-brand">NINJA KEN</h1>
+        <ul class="footer-items">
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#project">Project Contoh</a></li>
+          <li><a href="#contact">Hubungi Saya</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
