@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Aldilla Ulinnaja" />
+    <title>Latihan AJAX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center flex-col min-h-[100vh]">
+    <h1 class="text-center text-4xl font-bold">Get Pikachu!</h1>
+    <div class="flex flex-col gap-4 items-center justify-center mt-5">
+      <button
+        class="bg-yellow-300 hover:bg-yellow-400 font-semibold transition-all w-20 h-10 rounded-md border border-slate-500"
+      >
+        Get!
+      </button>
+      <div
+        class="bg-gradient-to-br from-yellow-400 to-amber-500 w-[400px] h-[500px] rounded-lg p-5 shadow-xl relative hidden"
+        id="card-pokemon"
+      >
+        <p
+          class="absolute top-0 left-0 p-4 bg-amber-500 rounded-tl-lg rounded-br-lg font-semibold text-xl"
+          id="id-pokemon"
+        ></p>
+        <img
+          src=""
+          alt=""
+          class="w-[300px] h-[300px] mx-auto"
+          id="img-pokemon"
+        />
+        <h1
+          class="text-center text-2xl font-bold capitalize"
+          id="name-pokemon"
+        ></h1>
+        <p class="font-bold text-center mt-2 text-xl">
+          Type: <span id="types-pokemon" class="capitalize"></span>
+        </p>
+        <p class="font-semibold text-center mt-2 text-lg">
+          Abilities: <span id="abilities-pokemon" class="capitalize"></span>
+        </p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

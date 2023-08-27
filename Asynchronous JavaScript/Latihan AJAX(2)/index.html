@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Aldilla Ulinnaja" />
+    <title>Latihan AJAX(2)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              grass: "#78C850",
+              grassBorder: "#62B957",
+              water: "#6890F0",
+              waterBorder: "#3D6FC7",
+              fire: "#F08030",
+              fireBorder: "#DD6B20",
+              bug: "#A8B820",
+              bugBorder: "#8CB230",
+              normal: "#A8A878",
+              normalBorder: "#9DAEAE",
+              flying: "#A890F0",
+              flyingBorder: "#A1871F",
+              rock: "#B8A038",
+              rockBorder: "#A1871F",
+              ground: "#E0C068",
+              groundBorder: "#927D44",
+              physic: "#F85888",
+              physicBorder: "#A13959",
+              ghost: "#705898",
+              ghostBorder: "#493963",
+              dark: "#705848",
+              darkBorder: "#49392F",
+              steel: "#B8B8D0",
+              steelBorder: "#787887",
+              poison: "#A040A0",
+              poisonBorder: "#682A68",
+              electric: "#F7D02C",
+              electricBorder: "#F2C20F",
+              fairy: "#EE99AC",
+              fairyBorder: "#D685AD",
+              fighting: "#C03028",
+              fightingBorder: "#7D1F1A",
+              dragon: "#7038F8",
+              dragonBorder: "#4924A1",
+              ice: "#98D8D8",
+              iceBorder: "#638D8D",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex items-center justify-center flex-col min-h-[100vh] mb-5 mx-2"
+  >
+    <h1 class="text-center text-4xl font-bold">Get Pokemon!</h1>
+    <div class="flex flex-col gap-4 items-center justify-center mt-5">
+      <button
+        class="bg-yellow-300 hover:bg-yellow-400 font-semibold transition-all w-20 h-10 rounded-md border border-slate-500"
+      >
+        Get!
+      </button>
+      <div
+        class="grid lg:grid-cols-4 md:gap-3 gap-2 grid-cols-1 md:grid-cols-3"
+        id="result"
+      ></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
