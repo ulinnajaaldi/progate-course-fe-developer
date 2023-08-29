@@ -40,7 +40,7 @@ const TaskSummary = () => {
 const styles: CSSProperties = {
   container: {
     padding: '40px',
-    width: '100%',
+    width: '70%',
   },
   heading: {
     color: '#55C89F',
