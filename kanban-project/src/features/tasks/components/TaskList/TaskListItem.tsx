@@ -1,8 +1,7 @@
 import React from 'react'
 import type { Task, CSSProperties } from '../../../../types'
 import { TASK_PROGRESS_STATUS, TASK_PROGRESS_ID } from '../../../../constants/app'
-import { useRecoilState } from 'recoil'
-import { tasksState } from '../../TaskAtoms'
+import { useTasksAction } from '../../../../hooks/Tasks'
 
 interface TaskListItemProps {
   task: Task
@@ -39,14 +38,7 @@ const getProgressCategory = (progressOrder: number): string => {
 }
 
 const TaskListItem = ({ task }: TaskListItemProps) => {
-  const [tasks, setTasks] = useRecoilState<Task[]>(tasksState)
-
-  const completeTask = (taskId: number): void => {
-    const updateTask = tasks.map((task) =>
-      task.id === taskId ? { ...task, progressOrder: TASK_PROGRESS_ID.COMPLETED } : task,
-    )
-    setTasks(updateTask)
-  }
+  const { completeTask } = useTasksAction()
 
   return (
     <div style={styles.tableBody}>
@@ -54,7 +46,7 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
         <span
           className="material-icons"
           style={getIconStyle(task.progressOrder)}
-          onClick={(): void => {
+          onClick={() => {
             completeTask(task.id)
           }}
         >
