@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Weather Forecast</h1>
+    </header>
+    <main class="content">
+      <div class="navigation-bar">
+        <form class="search-field">
+          <input
+            type="text"
+            name="city-name"
+            id="city-name"
+            placeholder="Search weather forecast of your city"
+          />
+          <button type="submit">search</button>
+        </form>
+      </div>
+      <div id="city-description"></div>
+      <div id="current-weather"></div>
+      <div id="weather-forecast"></div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
