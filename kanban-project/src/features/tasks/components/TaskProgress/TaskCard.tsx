@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { Task, CSSProperties } from '../../../../types'
 import { TASK_PROGRESS_ID } from '../../../../constants/app'
 import { useTasksAction } from '../../../../hooks/Tasks'
+import TaskMenu from '../shared/TaskMenu'
 
 interface TaskCardProps {
   task: Task
@@ -34,6 +35,8 @@ const TaskCard = ({ task }: TaskCardProps) => {
   const { completeTask } = useTasksAction()
   const { moveTaskCard } = useTasksAction()
 
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
   return (
     <div style={styles.taskCard}>
       <div style={styles.taskIcons}>
@@ -44,7 +47,13 @@ const TaskCard = ({ task }: TaskCardProps) => {
         >
           check_circle
         </div>
-        <div className="material-icons" style={styles.menuIcon}>
+        <div
+          className="material-icons"
+          style={styles.menuIcon}
+          onClick={(): void => {
+            setIsMenuOpen(true)
+          }}
+        >
           more_vert
         </div>
       </div>
@@ -67,6 +76,7 @@ const TaskCard = ({ task }: TaskCardProps) => {
           </button>
         )}
       </div>
+      {isMenuOpen && <TaskMenu setIsMenuOpen={setIsMenuOpen} task={task} />}
     </div>
   )
 }
