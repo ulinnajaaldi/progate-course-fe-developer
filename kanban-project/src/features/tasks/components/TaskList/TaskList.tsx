@@ -5,11 +5,14 @@ import TaskListItem from './TaskListItem'
 import type { Task, CSSProperties } from '../../../../types'
 import { TASK_PROGRESS_ID, TASK_MODAL_TYPE } from '../../../../constants/app'
 import TaskModal from '../shared/TaskModal'
+import TaskFilter from '../shared/TaskFilter'
 
 const TaskList = () => {
   const tasks: Task[] = useRecoilValue(tasksState)
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false)
+  const [filter, setFilter] = useState<Array<number>>([0])
 
   return (
     <div style={styles.container}>
@@ -23,7 +26,12 @@ const TaskList = () => {
         >
           <span className="material-icons">add</span>Add task
         </button>
-        <button style={styles.button}>
+        <button
+          style={styles.button}
+          onClick={(): void => {
+            setIsFilterOpen(true)
+          }}
+        >
           <span className="material-icons">sort</span>Filter tasks
         </button>
       </div>
@@ -34,9 +42,17 @@ const TaskList = () => {
           <div style={styles.tableHeaderDueDate}>Due Date</div>
           <div style={styles.tableHeaderProgress}>Progress</div>
         </div>
-        {tasks.map((task: Task) => {
-          return <TaskListItem task={task} key={task.id} />
-        })}
+        {tasks
+          .filter((task) => {
+            if (filter.find((i) => i > 0)) {
+              return filter.includes(task.progressOrder)
+            } else {
+              return true
+            }
+          })
+          .map((task) => (
+            <TaskListItem key={task.id} task={task} />
+          ))}
       </div>
       {isModalOpen && (
         <TaskModal
@@ -47,6 +63,7 @@ const TaskList = () => {
           selectedData={{} as Task}
         />
       )}
+      {isFilterOpen && <TaskFilter setFilter={setFilter} setIsFilterOpen={setIsFilterOpen} />}
     </div>
   )
 }
