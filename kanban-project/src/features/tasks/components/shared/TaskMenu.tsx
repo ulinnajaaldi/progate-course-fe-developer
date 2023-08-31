@@ -17,13 +17,14 @@ const TaskMenu = ({ setIsMenuOpen, task }: TaskMenuProps) => {
   const [type, setType] = useState<string>(TASK_MODAL_TYPE.ADD)
 
   return (
-    <div style={styles.menu}>
+    <div style={styles.menu} data-testid="task-menu">
       <div
         style={styles.menuItem}
         onClick={(): void => {
           setType(TASK_MODAL_TYPE.EDIT)
           setIsModalOpen(true)
         }}
+        data-testid="edit-button"
       >
         <span className="material-icons">edit</span>Edit
       </div>
@@ -33,6 +34,7 @@ const TaskMenu = ({ setIsMenuOpen, task }: TaskMenuProps) => {
           deleteTask(task.id)
           setIsMenuOpen(false)
         }}
+        data-testid="delete-button"
       >
         <span className="material-icons">delete</span>Delete
       </div>

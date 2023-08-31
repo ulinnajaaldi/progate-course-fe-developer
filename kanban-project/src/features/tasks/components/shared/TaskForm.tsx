@@ -51,6 +51,7 @@ const TaskForm = ({ type, defaultProgressOrder, setIsModalOpen, selectedData }: 
             setTitle(e.target.value)
           }}
           style={styles.formInput}
+          data-testid="title-input"
         />
       </div>
       <div style={styles.formItem}>
@@ -61,6 +62,7 @@ const TaskForm = ({ type, defaultProgressOrder, setIsModalOpen, selectedData }: 
             setDetail(e.target.value)
           }}
           style={styles.formTextArea}
+          data-testid="detail-input"
         />
       </div>
       <div style={styles.formItem}>
@@ -72,6 +74,7 @@ const TaskForm = ({ type, defaultProgressOrder, setIsModalOpen, selectedData }: 
             setDueDate(e.target.value)
           }}
           style={styles.formInput}
+          data-testid="due-date-input"
         />
       </div>
       <div style={styles.formItem}>
@@ -82,6 +85,7 @@ const TaskForm = ({ type, defaultProgressOrder, setIsModalOpen, selectedData }: 
           onChange={(e): void => {
             setProgressOrder(Number(e.target.value))
           }}
+          data-testid="progress-select"
         >
           <option value={TASK_PROGRESS_ID.NOT_STARTED}>{TASK_PROGRESS_STATUS.NOT_STARTED}</option>
           <option value={TASK_PROGRESS_ID.IN_PROGRESS}>{TASK_PROGRESS_STATUS.IN_PROGRESS}</option>
@@ -95,6 +99,7 @@ const TaskForm = ({ type, defaultProgressOrder, setIsModalOpen, selectedData }: 
         onClick={(): void => {
           handleSubmit()
         }}
+        data-testid="task-modal-submit-button"
       >
         Submit
       </button>

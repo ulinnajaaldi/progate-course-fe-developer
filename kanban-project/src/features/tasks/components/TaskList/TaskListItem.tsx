@@ -43,7 +43,7 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   return (
-    <div style={styles.tableBody}>
+    <div style={styles.tableBody} data-testid="task-list-item">
       <div style={styles.tableBodyTaskTitle}>
         <span
           className="material-icons"
@@ -66,6 +66,7 @@ const TaskListItem = ({ task }: TaskListItemProps) => {
           onClick={(): void => {
             setIsMenuOpen(true)
           }}
+          data-testid="task-menu-button"
         >
           more_horiz
         </span>
