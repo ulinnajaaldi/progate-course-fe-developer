@@ -29,7 +29,7 @@ const TaskSummary = () => {
         <Link to="/task-list" style={styles.link}>
           See Your Task List
         </Link>
-        <Link to="/progress-management" style={styles.link}>
+        <Link to="/task-progress" style={styles.link}>
           Manage Your Task Progress
         </Link>
       </div>
